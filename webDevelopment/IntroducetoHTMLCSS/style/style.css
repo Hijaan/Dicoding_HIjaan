@@ -1,3 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 header {
     padding: 0px 0;
     text-align: none;
@@ -15,27 +25,44 @@ nav {
     font-weight: bold;
 }
 
+nav ul {
+    padding-inline:4rem;
+    display:flex;
+    gap: 1rem;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin: 0 10px;
+
+}
+
 nav a {
+    font-size: 18px;
     padding: 2px;
     border-radius: 8px;
-    font-weight: 400;
+    font-weight: bold;
     text-decoration: none;
     color: white;
 }
 
 nav a:hover {
-    color: #000000;
-    text-decoration: none;
-
-    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
 }
 
-.profile-image {
+.profile img {
     width: 200px;
 }
 
+#profile {
+    background-color: #ada8a8;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 .card {
-    margin: 20px;
+    margin: 5px;
     padding: 20px;
     background-color: #f0f0f0;
     border-radius: 8px;
@@ -49,39 +76,22 @@ nav a:hover {
     object-position: center;
 }
 
-.featured-image {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    object-position: center;
-}
-
-body {
-    font-family: 'Quicksand', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 main {
+    margin: 10px;
+    padding: 20px;
+    background-color: #969191;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    h2,
-    h3 {
-        font-family: 'Quicksand', sans-serif;
+    overflow: auto;
+    display: flex;
+    gap: 1.5rem;
+}
+
+h2,h3 { 
         line-height: 1.6;
         color: #0060f0;
     }
-
-    article {
-        margin: 10px;
-        padding: 10px;
-        background-color: #969191;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    overflow: auto;
-
-}
 
 table {
     border-collapse: collapse;
@@ -102,33 +112,20 @@ table {
 }
 
 footer {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    height: 80px;
+    text-align: center;
     background-color: #96bfe7;
+    font-weight: bold;
+    padding:20px
 }
 
 aside {
+    flex: 1;
     text-align: center;
     background-color: #ada8a8;
     float: right;
-    width: 30%;
-    margin-top: 20px;
-    padding-right: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#profile {
-    background-color: #ada8a8;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header {
-    display: inline;
 }
 
 .jumbotron {
@@ -140,10 +137,6 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav li {
-    display: inline;
-    margin: 0 10px;
-}
 
 #info {
     margin: 5px;
@@ -165,17 +158,26 @@ figcaption {
 
 #content {
     float: left;
-    width: 70%;
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
 }
 
-* {
-    box-sizing: border-box;
-}
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
 
-@media screen and (max-width: 1000px) {
+    main {
+        flex-flow: column nowrap;
+    }
 
-    #content,
-    aside {
-        width: 100%
+    main aside {
+        align-self: stretch;
+    }
+   
+    main aside {
+        align-self: center;
     }
 }
