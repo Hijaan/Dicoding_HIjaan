@@ -1,3 +1,96 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 0px 0;
+    text-align: none;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #2364a5;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+nav ul {
+    padding-inline:4rem;
+    display:flex;
+    gap: 1rem;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin: 0 10px;
+
+}
+
+nav a {
+    font-size: 18px;
+    padding: 2px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+.profile img {
+    width: 200px;
+}
+
+#profile {
+    background-color: #ada8a8;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card {
+    margin: 5px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+main {
+    margin: 10px;
+    padding: 20px;
+    background-color: #969191;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    overflow: auto;
+    display: flex;
+    gap: 1.5rem;
+}
+
+h2,h3 { 
+=======
 header {
     padding: 10px 0;
     text-align: none;
@@ -31,7 +124,6 @@ main {
         line-height: 1.6;
         color: #0060f0;
     }
-
     article {
         margin: 20px;
         padding: 20px;
@@ -62,6 +154,75 @@ table {
 }
 
 footer {
+    justify-content: center;
+    text-align: center;
+    background-color: #96bfe7;
+    font-weight: bold;
+    padding:20px
+}
+
+aside {
+    flex: 1;
+    text-align: center;
+    background-color: #ada8a8;
+    float: right;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.jumbotron {
+    font-size: 20px;
+    background-color: #388adc;
+    padding: 30px;
+    text-align: center;
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#info {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#content {
+    float: left;
+    flex: 5;
+    display: left;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    main {
+        flex-flow: column nowrap;
+    }
+
+    main aside {
+        align-self: stretch;
+    }
+   
+    main aside {
+        align-self: center;
+    }
+
     display: flex;
     justify-content: center;
     align-items: center;
