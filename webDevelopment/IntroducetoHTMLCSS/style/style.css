@@ -159,7 +159,7 @@ figcaption {
 #content {
     float: left;
     flex: 5;
-    display: flex;
+    display: left;
     flex-flow: column nowrap;
     gap: 1rem 2rem;
 }
