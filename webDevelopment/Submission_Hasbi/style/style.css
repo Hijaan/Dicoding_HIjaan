@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+header {
+    
+    font-family: 'montserrat', sans-serif;
+    color: white;
+
+}
+
+body {
+    font-family: 'montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #2364a5;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+nav ul {
+    padding-inline:4rem;
+    display:flex;
+    gap: 1rem;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin: 0 10px;
+
+}
+
+nav a {
+    font-size: 18px;
+    padding: 2px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+.profile img {
+    width: 200px;
+}
+
+#profile {
+    background-color: #ada8a8;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card {
+    margin: 5px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+main {
+    margin: 10px;
+    padding: 20px;
+    background-color: #969191;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    overflow: auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+h2,h3 { 
+        line-height: 1.6;
+        color: #0060f0;
+    }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    font-family: 'Quicksand', sans-serif;
+
+    th,
+    td {
+        border: 1px solid #e3acac;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #d67c7c;
+        text-align: left;
+    }
+}
+
+footer {
+    justify-content: space-between;
+    text-align: center;
+    background-color: #96bfe7;
+    flex-direction: column;
+    padding:0px
+}
+
+aside {
+    text-align: center;
+    background-color: #ada8a8;
+    display: flex;
+    flex-basis: 35%;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 4px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.jumbotron {
+    font-size: 20px;
+    background-color: #388adc;
+    padding: 100px;
+    text-align: center;
+    margin: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#info {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    flex-basis:75%;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    main {
+        flex-flow: column nowrap;
+    }
+
+    main aside {
+        align-self: stretch;
+    }
+   
+    main aside {
+        align-self: stretch;
+    }
+}
