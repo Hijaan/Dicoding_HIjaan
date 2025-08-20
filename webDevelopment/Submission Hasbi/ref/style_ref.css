@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a,
+.menu button {
+  color: white;
+  background: none;
+  border: none;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.menu a:hover,
+.menu button:hover {
+  background-color: #444;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  flex-direction: column;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Hover hanya aktif di layar besar */
+@media (min-width: 768px) {
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown button {
+    pointer-events: none; /* biar klik tidak bereaksi di desktop */
+  }
+}
+
+/* Mobile toggle class */
+.dropdown.open .dropdown-content {
+  display: flex;
+}

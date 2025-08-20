@@ -173,9 +173,9 @@ aside {
 .jumbotron {
     font-size: 20px;
     background-color: #388adc;
-    padding: 30px;
+    padding: 100px;
     text-align: center;
-    margin: 0;
+    margin: 100;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 

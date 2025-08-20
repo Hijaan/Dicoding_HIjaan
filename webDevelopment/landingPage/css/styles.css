@@ -34,7 +34,7 @@ header.navbar-container .nav-list ul {
     padding-left: 0;
     display: flex;
     gap: 2rem 1rem;
-}
+}   
 
 header.navbar-container .nav-list li {
     list-style: none;
