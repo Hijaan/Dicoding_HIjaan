@@ -4,52 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Profil Kota Bandung</title>
+  <title>Haizuu Coffe</title>
   <link rel="stylesheet" href="style/style.css">
 
   <!------------Google Fonts------------>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
 
 <body>
-  <!--<form>
-    <div>
-      <label for="email">Email:</label>
-      <br />
-      <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
-    </div>
-    <div>
-      <label for="password">Password:</label>
-      <br />
-      <input type="password" id="password" name="password" placeholder="Masukkan password Anda" required>
-    </div>
-    <button type="submit">Login</button>
-  </form>-->
   <header>
-    <div class="jumbotron">
-      <h1>Kota Bandung</h1>
-      <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.</p>
+    <div class="navbar">
+      <div class="logo">
+        <a href="#"><img src="img/logo.svg" alt="Haizu Coffe">
+        <div class="logo-text">Haizu coffee</div>
+      </div>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <div class="nav-links-conrtainer">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toogle">Information</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">What is Coffe?</a></li>
+              <li><a href="#">Why is Coffe?</a></li>
+              <li><a href="#">How Coffe is made?</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <nav>
-      <ul>
-        <li>
-          <a href="#sejarah">Sejarah</a>
-        </li>
-        <li>
-          <a href="#geografis">Geografis</a>
-        </li>
-        <li>
-          <a href="#wisata">Wisata</a>
-        </li>
-      </ul>
-    </nav>
   </header>
   <main>
-    <div id="content" class="content">
-      <article id="sejarah" class="card">
-        <h2>Sejarah</h2>
-        <figure>
+    <div id="content">
+      <article id="what" class="card">
+        <h2>what is cofee?</h2>
+        <figure> 
           <img src="assets/images/bandung.jpg" alt="Balai Kota Bandung" class="featured-image" />
         </figure>
         <p>
@@ -69,8 +62,8 @@
           Banda berada.
         </p>
       </article>
-      <article id="geografis" class="card">
-        <h2>Geografis</h2>
+      <article id="why" class="card">
+        <h2>why is coffe?</h2>
         <img src="assets/images/map_bandung.png" alt="Peta Kota Bandung" class="featured-image" />
         <p>Kota Bandung dikelilingi oleh pegunungan, sehingga bentuk morfologi wilayahnya bagaikan sebuah mangkok
           raksasa,
@@ -86,8 +79,8 @@
           Bandung
           selatan sangat rentan terhadap masalah banjir terutama pada musim hujan.</p>
       </article>
-      <article id="wisata" class="card">
-        <h2>Wisata</h2>
+      <article id="How" class="card">
+        <h2>How Cofee is Made?</h2>
         <p>Sejak dibukanya Jalan Tol Cipularang, kota Bandung telah menjadi tujuan utama dalam menikmati liburan akhir
           pekan terutama dari masyarakat yang berasal dari Jakarta sekitarnya. Selain menjadi kota wisata belanja,
           kota
@@ -118,43 +111,45 @@
     </div>
     <!---Konten samping-->
     <aside>
-      <h2>Kota Bandung</h2>
-      <p style="color: #141010;">Kota kembang paris van Java</p>
-      <figure>
-        <img src="assets/images/Bandung_coa.png" alt="Lambang Kota Bandung" class="profile-image" />
-        <figcaption style="color: #141010;">Lambang Kota Bandung</figcaption>
-      </figure>
-      <article id="info" class="none">
-        <h2>Informasi tambahan</h2>
-        <table>
-          <caption>Data Kota Bandung</caption>
-          <thead>
-            <tr>
-              <th>Nama</th>
-              <th>Jumlah Penduduk</th>
-              <th>Luas Wilayah</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Kota Bandung</td>
-              <td>2.575.478 jiwa</td>
-              <td>167,67 km²</td>
-            </tr>
-            <tr>
-              <td>Kabupaten Bandung</td>
-              <td>3.635.000 jiwa</td>
-              <td>1.767,7 km²</td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
+      <div class="side">
+      <form>
+        <div class="logo-form">
+          <img src="img/logo.svg" alt="Logo" />
+          <img src="img/WASON.svg" alt="WASON" />
+        </div>
+        <div class="form-description">
+          <p>Order Your coffee here</p>
+        </div>
+        <div class="input-form">
+          <label for="email">Email:</label>
+          <br />
+          <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+          <label for="password">Password:</label>
+          <br />
+          <input type="password" id="password" name="password" placeholder="Masukkan password Anda" required>
+        </div>
+        <button type="submit">Order</button>
+      </form>
+      </div>
     </aside>
   </main>
 
   <footer>
-    <p>Belajar Bahasa pemrograman web &#169; 2025, Dicoding Academy</p>
-    <p>Informasi selengkapnya bisa Anda dapatkan di <cite><a href="https://dicoding.com">dicoding.com</a></cite>.</p>
+    <div class="footer-contact">
+      <h1>Contact</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/hasbi-maarif">
+        <img src="img/linkedin.png" />
+      </a></li>
+      <li><a href="https://github.com/Hijaan">
+        <img src="img/github.png" />
+      </a></li>
+      <li><a href="https://www.instagram.com/hsbmrif/" >
+        <img src="img/instagram.png" />
+      </a></li>
+    </ul>
+    </nav>
+    <p>&copy;2025 Hasbi Ma'arif, Belajar Bahasa pemrograman web</p>
   </footer>
 </body>
 

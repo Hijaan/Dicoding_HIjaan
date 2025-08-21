@@ -1,27 +1,111 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Dropdown Responsive</title>
-  <link rel="stylesheet" href="style_ref.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dropdown Interaktif</title>
+    <style>
+        /* Gaya CSS */
+
+        /* CSS Dasar untuk Menu */
+        .dropdown-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .dropdown-menu li {
+            float: left;
+            position: relative; /* Penting untuk positioning dropdown */
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: #555;
+        }
+
+        /* Menyembunyikan dropdown secara default dengan kelas .hidden */
+        .dropdown-content.hidden {
+            display: none;
+        }
+
+        /* Styling dropdown */
+        .dropdown-content {
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content li a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #ddd;
+        }
+    </style>
 </head>
 <body>
 
-  <nav>
-    <ul class="menu">
-      <li><a href="#">Beranda</a></li>
-      <li class="dropdown">
-        <button class="dropdown-toggle">Layanan <img src="arrow.svg"></button>
-            
-        <div class="dropdown-content" id="layananDropdown">
-          <!-- Diisi JavaScript -->
-        </div>
-      </li>
-      <li><a href="#">Tentang</a></li>
-      <li><a href="#">Kontak</a></li>
-    </ul>
-  </nav>
+<nav class="dropdown-menu">
+  <ul>
+    <li><a href="#">Beranda</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle">Produk</a>
+      <ul class="dropdown-content hidden">
+        <li><a href="#">Elektronik</a></li>
+        <li><a href="#">Pakaian</a></li>
+        <li><a href="#">Buku</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Layanan</a></li>
+    <li><a href="#">Kontak</a></li>
+  </ul>
+</nav>
 
-  <script src="ref.js"></script>
+<p style="margin-top: 50px; text-align: center;">Klik menu "Produk" untuk melihat dropdown.</p>
+
+<script>
+    // Kode JavaScript
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        const dropdownContent = this.nextElementSibling;
+        
+        dropdownContent.classList.toggle('hidden');
+      });
+    });
+
+    // Menutup dropdown saat mengklik di luar area menu
+    document.addEventListener('click', function(event) {
+      dropdownToggles.forEach(toggle => {
+        const dropdownContent = toggle.nextElementSibling;
+        const isClickInsideMenu = toggle.contains(event.target) || dropdownContent.contains(event.target);
+        
+        if (!isClickInsideMenu) {
+          dropdownContent.classList.add('hidden');
+        }
+      });
+    });
+</script>
+
 </body>
 </html>

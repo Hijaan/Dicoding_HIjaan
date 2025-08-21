@@ -1,38 +1,28 @@
-// Data layanan
-const layanan = [
-  "Pembuatan Website",
-  "Desain Grafis",
-  "Digital Marketing",
-  "SEO & Analytics",
-  "Hosting & Domain"
-];
+// Ambil semua elemen dengan kelas 'dropdown-toggle'
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
-// Isi dropdown via JS
-const dropdown = document.getElementById("layananDropdown");
+dropdownToggles.forEach(toggle => {
+  toggle.addEventListener('click', function(event) {
+    // Mencegah browser berpindah halaman
+    event.preventDefault();
 
-layanan.forEach(item => {
-  const link = document.createElement("a");
-  link.href = "#";
-  link.textContent = item;
-  dropdown.appendChild(link);
+    // Dapatkan elemen dropdown-content yang terkait
+    const dropdownContent = this.nextElementSibling;
+    
+    // Toggle (menambah/menghapus) kelas 'hidden'
+    dropdownContent.classList.toggle('hidden');
+  });
 });
 
-// Logika klik di mobile (maks. 767px)
-const toggleBtn = document.querySelector(".dropdown-toggle");
-const dropdownItem = document.querySelector(".dropdown");
-
-toggleBtn.addEventListener("click", function (e) {
-  // Cek ukuran layar
-  if (window.innerWidth < 768) {
-    dropdownItem.classList.toggle("open");
-  }
-});
-
-// Tutup dropdown jika klik di luar (khusus mobile)
-document.addEventListener("click", function (e) {
-  if (window.innerWidth < 768) {
-    if (!dropdownItem.contains(e.target)) {
-      dropdownItem.classList.remove("open");
+// Tutup dropdown saat mengklik di luar area menu
+document.addEventListener('click', function(event) {
+  dropdownToggles.forEach(toggle => {
+    const dropdownContent = toggle.nextElementSibling;
+    const isClickInsideMenu = toggle.contains(event.target) || dropdownContent.contains(event.target);
+    
+    // Jika klik tidak berada di dalam menu dropdown, tutup
+    if (!isClickInsideMenu) {
+      dropdownContent.classList.add('hidden');
     }
-  }
+  });
 });

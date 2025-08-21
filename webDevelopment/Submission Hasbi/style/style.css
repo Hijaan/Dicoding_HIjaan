@@ -6,9 +6,6 @@
   font-family: "Lilita One, sans";
 }
 
-body {
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;

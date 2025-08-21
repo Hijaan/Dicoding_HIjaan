@@ -57,6 +57,7 @@ header.navbar-container .nav-list li a:hover {
     color: white;
 }
 
+/*-------MAIN SECTION---------*/
 main {
     flex: 1;
     display: flex;

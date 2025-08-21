@@ -1,80 +1,51 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Aturan dasar menu (sama seperti sebelumnya) */
+.dropdown-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
 }
 
-body {
-  font-family: Arial, sans-serif;
+.dropdown-menu li {
+    float: left;
+    position: relative; /* Penting untuk positioning dropdown */
 }
 
-nav {
-  background-color: #333;
-  padding: 10px 20px;
+.dropdown-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.menu {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  flex-wrap: wrap;
+.dropdown-menu li a:hover {
+    background-color: #555;
 }
 
-.menu li {
-  position: relative;
+/* Menyembunyikan dropdown secara default dengan kelas .hidden */
+.dropdown-content.hidden {
+    display: none;
 }
 
-.menu a,
-.menu button {
-  color: white;
-  background: none;
-  border: none;
-  text-decoration: none;
-  padding: 10px 15px;
-  display: block;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.menu a:hover,
-.menu button:hover {
-  background-color: #444;
-}
-
+/* Styling dropdown (sama seperti sebelumnya) */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  min-width: 160px;
-  flex-direction: column;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
-.dropdown-content a {
-  color: #333;
-  padding: 10px;
-  text-decoration: none;
+.dropdown-content li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-/* Hover hanya aktif di layar besar */
-@media (min-width: 768px) {
-  .dropdown:hover .dropdown-content {
-    display: flex;
-  }
-
-  .dropdown button {
-    pointer-events: none; /* biar klik tidak bereaksi di desktop */
-  }
-}
-
-/* Mobile toggle class */
-.dropdown.open .dropdown-content {
-  display: flex;
+.dropdown-content li a:hover {
+    background-color: #ddd;
 }

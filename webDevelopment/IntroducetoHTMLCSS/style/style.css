@@ -212,13 +212,14 @@ figcaption {
     }
 
     main {
-        flex-flow: column nowrap;
+        flex-flow: column wrap;
     }
 
     main aside {
         align-self: stretch;
     }
    
+<<<<<<< HEAD
     main aside {
         align-self: center;
     }
@@ -229,4 +230,6 @@ figcaption {
     height: 80px;
     background-color: #96bfe7;
     ;
+=======
+>>>>>>> cb6e786 (So Long dayum, first check point btw i am gonna go out)
 }
