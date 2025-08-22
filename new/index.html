@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Dropdown</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">SpareParts</div>
+        
+        <button class="mobile-menu-btn">☰</button>
+        
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Categories ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Engine Parts</a></li>
+                    <li><a href="#">Electrical</a></li>
+                    <li><a href="#">Suspension</a></li>
+                    <li><a href="#">Brakes</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Brands ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Bosch</a></li>
+                    <li><a href="#">Denso</a></li>
+                    <li><a href="#">Mann-Filter</a></li>
+                    <li><a href="#">ACDelco</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

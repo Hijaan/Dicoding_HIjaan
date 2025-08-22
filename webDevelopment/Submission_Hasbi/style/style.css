@@ -6,36 +6,24 @@
     scroll-behavior: smooth;
 }
 /*-------Header----------*/
-header {
-    padding: 0px 0;
-    text-align: none;
-    color: white;
-
-}
 
 .navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color:#bca88d;
+    background-color:#000000;
     align-items: center;
-    margin-inline: auto;
-    padding: 0 1rem;
-    text-decoration: none;
+    position: relative;
+    color: white;
+    height: 50px;
+    padding: 1rem 2rem;
 }
 
-.logo a {
+/* Logo website */
+.logo {
+    align-items: center;
     display: flex;
-    align-items: center;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.logo img {
-  display: flex;
-  width: 40px;
-  height: auto;
-  margin-top: 10px;
+    flex-direction: row;
 }
 
 .logo .logo-text {
@@ -45,49 +33,112 @@ header {
     margin-left: 12px;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 1.8em;
-  cursor: pointer;
-}
-
-.nav-links-container {
-    padding: 1px 0;
-}
-
+/*-----Menu Style*/
 .nav-links {
-    list-style: none;
+    display: flex;
+    list-style-type: none;
 }
 
-.nav-links > .nav-links-item {
-    display: inline-block;
-    margin: 0 24px ;
+.nav-links li {
+    margin-left: 2rem;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
-.nav-links > .nav-links-item > a {
+.nav-links a {
+    color: white;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 0 24px;
+    padding: 0.5rem 0;
+    text-decoration: none;
+}
+
+/* Menu Dropdown */
+.dropdown-menu{
     text-decoration: none;
     display: flex;
     padding: 0.5rem 0rem;
     color: black;
-    transition: 0.3s ease;
-    align-items: center;
+    top: 100%;
+    position: absolute;
+    left: 0;
+    border-radius: 5px;
+    background: white;
+    width: 200px;
+    box-shadow: 0 2px 5px black;
+    transition: all 0.3s ease;
+    opacity: 0;
+    flex-direction: column;
+    transform: translateY(-10px);
+    list-style: none;
 }
-.nav-links a:hover {
-    background-color: #919191;
-    border-radius: 8px;
+
+.dropdown-menu li{
+    margin: 0;
+    padding: 0.5rem 1 rem;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom:none;
+}
+
+.dropdown-menu a{
+    color: #333;
+    padding: 0.5rem 0;
+}
+
+.dropdown-menu a:hover{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown:hover .dropdown-menu{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/*-------Mobile Menu-------*/
+.mobile-menu {
+    display: none;
+    background: none;
+    border:none;
+    color : white;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /*---------Body-------*/
 body {
-    background-color: #7d8d86;
+    background-color: #eceeed;
 }
 
-.card {
+.what {
     margin: 5px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: url(img\Biji Kopi.png);
+}
+
+.why {
+    margin: 5px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+}
+
+
+.how {
+    margin: 5px;
+    padding: 20px;
+    border-radius: 8px;
+    background-image: url(img\Biji Kopi.png);
 }
 
 .featured-image {
@@ -111,20 +162,24 @@ h2,h3 {
         color: #0060f0;
     }
 
-main aside.form 
+
 aside {
     text-align: center;
     float: right;
     border-radius: 8px;
     background-color: #7d8d86;
-    width: 20%;
+    display: flex;
+    flex-shrink: 1;
+    justify-content: center;
+    padding: 10%;
 }
+
 .logo-form {
     display: block;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    max-width: 80%;
+    justify-content: ;
+    max-width: 90%;
     margin: auto;
     height: auto;
     object-fit: cover;
@@ -133,7 +188,7 @@ aside {
     font-weight: bold;
     display: flex;  
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     max-width: 80%;
     margin: auto;
@@ -161,11 +216,6 @@ aside {
 
 }
 
-.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
 
 #content {
     float: left;
@@ -184,7 +234,8 @@ footer {
     background-color: #f1f0e4;
     font-weight: bold;
     margin: 0;
-    padding:0px
+    padding:0px;
+    font-size: 13px;
 }
 
 .footer-contact{
@@ -192,7 +243,7 @@ footer {
 }
 
 .footer-contact a img{
-    width: 30px;
+    width: 20px;
 
 }
 
@@ -209,8 +260,48 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    nav ul {
-        justify-content: center;
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #2c3e50;
+        flex-direction: column;
+        padding: 1rem 0;
+        clip-path: circle(0px at 90% - 10%);
+        transition: clip-path 0.5s ease ease-in-out;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+    }
+    
+    .dropdown-menu {
+        position: relative;
+        background: #34495e;
+        width: 100%;
+        box-shadow: none;
+        display: none;
+    }
+
+    .dropdown-menu li {
+        padding-left: 2rem;
+    }
+
+    .dropdown-menu.open{
+        display: flex;
+        transform: treanslateY(90);
+        pointer-events: ;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+    .dropdown .dropdown-toggle:after {
+        content: 
+    }
+    .nav-links li {
+        margin: 0;
+        padding: 1rem 2rem;
     }
 
     main {
@@ -219,9 +310,5 @@ footer {
 
     main aside {
         align-self: stretch;
+        align-items: center;
     }
-   
-    main aside {
-        align-self: center;
-    }
-}
