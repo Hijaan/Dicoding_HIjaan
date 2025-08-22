@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
   const navLinks = document.querySelector('.nav-links');
   const mobileMenu = document.querySelector('.mobile-menu');
-  const dropdownToggles = document.querySelector('.dropdown-toggle');
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle'); // ✅ pakai All
 
   // Mobile Menu Button
   mobileMenu.addEventListener('click', () => {
@@ -30,12 +30,13 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
   document.addEventListener('click', (e) => {
-    if(window.innerWidth >768 && !e.target.closest('dropdown')) {
-      document.querySelectorAll('.dropdown').forEach(dropdown =>{
-        dropdown.classList.remove('dropdown-hover');
-      });
-    }
-  });
+  if(window.innerWidth > 768 && !e.target.closest('.dropdown')) { // ✅ tambahin titik
+    document.querySelectorAll('.dropdown').forEach(dropdown =>{
+      dropdown.classList.remove('dropdown-hover');
+    });
+  }
+});
+
 
   //Window resize
   window.addEventListener('resize', () => {

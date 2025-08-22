@@ -287,11 +287,14 @@ footer {
         padding-left: 2rem;
     }
 
-    .dropdown-menu.open{
+    .dropdown-menu.open {
         display: flex;
-        transform: treanslateY(90);
-        pointer-events: ;
-    }
+        flex-direction: column;
+        transform: translateY(0); 
+        opacity: 1;
+        pointer-events: auto;       
+}
+
 
     .mobile-menu {
         display: flex;

@@ -90,7 +90,7 @@ main {
 }
 
 h2,h3 { 
-=======
+
 header {
     padding: 10px 0;
     text-align: none;
@@ -218,18 +218,3 @@ figcaption {
     main aside {
         align-self: stretch;
     }
-   
-<<<<<<< HEAD
-    main aside {
-        align-self: center;
-    }
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    background-color: #96bfe7;
-    ;
-=======
->>>>>>> cb6e786 (So Long dayum, first check point btw i am gonna go out)
-}
