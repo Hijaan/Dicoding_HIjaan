@@ -18,40 +18,36 @@
     <nav class="navbar">
       <div class="logo">
         <h1 class="coffee">Coffee</h1>
-        <h1 class="dee">Dee</h1>
+        <h1 class="dee">Dee.</h1>
       </div>
       <button class="mobile-menu">☰</button>
       <ul class="nav-links" id="nav-links">
           <li><a href="#">Home</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Information</a>
+            <a href="#" class="dropdown-toggle">Blog<img src="img/arrow.svg"></a>
             <ul class="dropdown-menu">
-              <li><a href="#what">What is Coffe?</a></li>
-              <li><a href="#why">Why is Coffe?</a></li>
-              <li><a href="#how">How Coffe is made?</a></li>
+              <li><a href="#what">Apa?</a></li>
+              <li><a href="#why">Kenapa?</a></li>
+              <li><a href="#how">Bagaimana?</a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Products</a>
+            <a href="#" class="dropdown-toggle">Products<img src="img/arrow.svg"></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Arbica</a></li>
               <li><a href="#">Cappucino</a></li>
               <li><a href="#">Arbica</a></li>
               <li><a href="#">Cappucino</a></li>
             </ul>
           </li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
   </header>
   <main>
-    <div id="content">
-      <article id="what" class="what">
-        <h2>what is cofee?</h2>
-        <figure> 
-          <img src="img/Biji.png" alt="Coffee" class="featured-image" />
-        </figure>
+    <div id="content" class="content">
+      <div class="what" id="what">
+        <h1 class="h1">Apa arti kopi bagi kehidupan?</h1>
         <p>
           Kopi adalah minuman yang berasal dari biji tanaman Coffea yang dipanggang lalu digiling. 
           Minuman ini memiliki cita rasa khas yang pahit namun nikmat, serta mengandung kafein yang memberi efek menyegarkan. 
@@ -62,67 +58,49 @@
           Dari biji kecil yang keras, ia melewati proses panjang — dipetik, dikeringkan, disangrai, hingga digiling — lalu hadir sebagai cairan hangat yang memberi arti. 
           Kopi adalah cermin kehidupan: pahit di awal, namun menyisakan kenikmatan bagi mereka yang sabar menikmatinya.
         </p>
-      </article>
-      <article id="why" class="why">
-        <h2>why is coffe?</h2>
-        <img src="img/MinumKopi.png" alt="minum Kopi">
+      </div>  
+      <div class="why" id="why">
+        <h1>Kenapa kopi menjadi minuman favorit?</h1>
         <p>Banyak orang memilih kopi karena kemampuannya memberikan energi dan fokus berkat kandungan kafeinnya. 
           Selain itu, aroma dan rasa kopi yang unik menjadikannya minuman favorit di berbagai suasana, baik saat bekerja, belajar, maupun bersantai. 
           Kopi juga memiliki nilai sosial, karena sering menjadi alasan orang berkumpul, berbincang, atau sekadar menikmati momen bersama.
         </p>
         <p>Orang mencari kopi bukan hanya untuk mengusir kantuk, tetapi untuk menemukan ketenangan di tengah hiruk-pikuk dunia. 
           Kopi menjadi alasan orang berhenti sejenak, merenung, dan merasakan hidup lebih dalam. Di balik rasa pahitnya, 
-          kopi mengajarkan bahwa setiap kepahitan bisa melahirkan energi, kehangatan, bahkan kebersamaan..</p>
-      </article>
-      <article id="how" class="how">
-        <h2>How Cofee is Made?</h2>
+          kopi mengajarkan bahwa setiap kepahitan bisa melahirkan energi, kehangatan, bahkan kebersamaan..
+        </p>
+        </div>
+      <div class="how" id="how">
+        <h1 class="h1">Bagaimana kopi bisa sampai di gelas kita?</h1>
         <p>Proses pembuatan kopi dimulai dari pemanenan buah kopi matang, kemudian bijinya dipisahkan, difermentasi, dan dikeringkan. 
           Setelah itu, biji kopi disangrai untuk menghasilkan aroma dan rasa yang khas, lalu digiling sesuai metode penyeduhan yang diinginkan. 
           Terakhir, bubuk kopi diseduh dengan air panas atau dingin sehingga tercipta secangkir kopi yang siap dinikmati
-          </p>
-        </section>
-      </article>
+        </p>
+      </div>
     </div>
     <!---Konten samping-->
     <aside>
       <div class="side">
-      <form>
-        <div class="logo-form">
-          <img src="img/logo.svg" alt="Logo" />
-        </div>
-        <div class="form-description">
-          <p>Order Your coffee here</p>
-        </div>
-        <div class="input-form">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" placeholder="Masukkan password Anda" required>
-        </div>
-        <button class="btn" type="submit">Order</button>
-      </form>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/hasbi-maarif">
+            <img src="img/linkedin.png" />
+          </a></li>
+          <li><a href="https://github.com/Hijaan">
+            <img src="img/github.png" />
+          </a></li>
+          <li><a href="https://www.instagram.com/hsbmrif/" >
+            <img src="img/instagram.png" />
+          </a></li>
+        </ul>
       </div>
     </aside>
   </main>
 
   <footer>
-    <div class="footer-contact">
+    <div class="contact" id="contact">
       <h1>Contact</h1>
-    </br>
-    <ul>
-      <li><a href="https://www.linkedin.com/in/hasbi-maarif">
-        <img src="img/linkedin.png" />
-      </a></li>
-      <li><a href="https://github.com/Hijaan">
-        <img src="img/github.png" />
-      </a></li>
-      <li><a href="https://www.instagram.com/hsbmrif/" >
-        <img src="img/instagram.png" />
-      </a></li>
-    </ul>
-  </br>
-    </nav>
-    <p>&copy;2025 Hasbi Ma'arif, Belajar Bahasa pemrograman web</p>
+    <p>&copy;2025 Hasbi Ma'arif, Belajar pemrograman web</p>
+    <p><a href="https://unsplash.com/photos/bunch-of-coffee-beans-gzcoF6TNrkg">img copyright : Mark Daynes </a></p>
   </footer>
   <script src="js/script.js"></script>
 </body>
