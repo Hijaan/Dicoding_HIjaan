@@ -13,7 +13,6 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 10px;
   align-items: center;
   position: fixed;
   z-index: 9999;
@@ -127,11 +126,11 @@ body {
 
 main {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 /* Cards */
-.what {
+.hero {
   position: relative;
   background-image: url("../img/coffe.jpg");
   height: 100vh;
@@ -144,44 +143,57 @@ main {
   flex-direction: column;
 }
 
-.what::before {
+.hero a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 50%;
+  padding-right: 20px;
+  font-size: 20px;
+}
+
+.hero a:hover {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  max-width: 170px;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+}
+
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
 }
 
-.what h1,
-.what p {
-  display: flex;
-  position: relative;
-  text-align: justify;
-  justify-content: left;
+.hero h1 {
+  max-width: 600px;
   color: white;
   margin-left: 10%;
-  margin-right: 40%;
+  margin-right: 50%;
   padding-right: 20px;
   z-index: 0;
-  align-items: center;
-  font-size: 20px;
-}
-
-.content .what h1 {
-  max-width: 60rem;
-  text-align: left;
+  font-size: 100px;
 }
 
 .why {
   position: relative;
-  background-image: url("../img/coffe.jpg");
-  min-height: 100vh;
+  background: url("../img/MinumKopi.png") center/cover no-repeat;
+  height: 100vh;
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  text-align: justify;
   display: flex;
+  transform: scaleX(-1);
   flex-direction: column;
 }
 
@@ -189,20 +201,37 @@ main {
   content: "";
   position: absolute;
   inset: 0;
+  transform: scaleX(-1);
   background: rgba(0, 0, 0, 0.5);
 }
 
 .why h1,
 .why p {
   display: flex;
+  transform: scaleX(-1);
   position: relative;
+  text-align: justify;
+  justify-content: left;
   color: white;
-  z-index: 1;
+  margin-left: 10%;
+  margin-right: 50%;
+  padding-right: 20px;
+  z-index: 0;
+  align-items: center;
 }
 
-.how {
+.why p {
+  font-size: 18px;
+}
+
+.why h1 {
+  font-size: 30px;
+}
+
+.product {
   position: relative;
-  height: 100vh;
+  height: 100%;
+  min-height: 100px;
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -210,38 +239,47 @@ main {
   align-items: center;
   text-align: center;
   display: flex;
+  flex-direction: row;
   background-color: #296d52;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
-.how::before {
+.product::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
 }
 
-.how h1 .how p {
+.product .card {
   display: flex;
-  align-self: first baseline;
+  flex-direction: column;
   justify-content: space-between;
   background-color: white;
   position: relative;
   color: rgb(241, 222, 222);
   z-index: 1;
+  align-items: center;
+  margin: 5px;
+  border-radius: 20px;
 }
 
-.how p {
-  display: flex;
-  position: relative;
-  color: white;
-  text-align: center;
-  margin: 10px;
+.card img {
+  width: 300px;
+  border-radius: 20px;
+  height: 300px;
+  padding: 10px;
 }
 
+.katalog-produk {
+  padding: 16px;
+}
+
+/*Aside*/
 main aside {
   position: fixed;
   inset-block: 0;
   inset-inline-end: 0;
+  z-index: 999;
 }
 
 aside .side {
@@ -254,16 +292,14 @@ aside .side ul {
   border-bottom-left-radius: 12px;
   margin: auto;
   background-color: #fcfdff;
-
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
 }
 
 .side ul li {
   list-style: none;
+  margin-top: 10px;
 }
 .side ul li img {
   display: flex;
@@ -278,12 +314,8 @@ footer {
   background-color: #f1f0e4;
   justify-content: center;
   font-weight: bold;
-  padding: 20px;
+  padding: 10px;
   font-size: 13px;
-}
-
-.contact h1 {
-  text-align: center;
 }
 
 /*---------Responsive------------*/
@@ -330,18 +362,11 @@ footer {
     display: flex;
     flex: none;
     order: 2; /* tampil setelah konten */
-    margin-top: 100%;
-
     min-width: 100%; /*biar fleksibel di hp */
   }
 
   .logo-form img {
     max-width: 80%; /* perkecil logo di layar kecil */
-  }
-
-  .input-form input,
-  .btn {
-    font-size: 14px;
   }
 
   .dropdown-menu {

@@ -24,19 +24,20 @@
       <ul class="nav-links" id="nav-links">
           <li><a href="#">Home</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Blog<img src="img/arrow.svg"></a>
+            <a href="#" class="dropdown-toggle">Products</a>
             <ul class="dropdown-menu">
-              <li><a href="#what">Apa?</a></li>
-              <li><a href="#why">Kenapa?</a></li>
-              <li><a href="#how">Bagaimana?</a></li>
+              <li><a href="#product">Arabica</a></li>
+              <li><a href="#product">Liberika</a></li>
+              <li><a href="#product">Excelsa</a></li>
+              <li><a href="#product">Robusta</a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Products<img src="img/arrow.svg"></a>
+            <a href="#" class="dropdown-toggle">Blog</a>
             <ul class="dropdown-menu">
-              <li><a href="#">Cappucino</a></li>
-              <li><a href="#">Arbica</a></li>
-              <li><a href="#">Cappucino</a></li>
+              <li><a href="#hero">Apa?</a></li>
+              <li><a href="#why">Kenapa?</a></li>
+              <li><a href="#how">Bagaimana?</a></li>
             </ul>
           </li>
           <li><a href="#contact">Contact</a></li>
@@ -46,37 +47,49 @@
   </header>
   <main>
     <div id="content" class="content">
-      <div class="what" id="what">
-        <h1 class="h1">Apa arti kopi bagi kehidupan?</h1>
-        <p>
-          Kopi adalah minuman yang berasal dari biji tanaman Coffea yang dipanggang lalu digiling. 
-          Minuman ini memiliki cita rasa khas yang pahit namun nikmat, serta mengandung kafein yang memberi efek menyegarkan. 
-          Saat ini, kopi tidak hanya dianggap sebagai minuman, tetapi juga bagian dari budaya dan gaya hidup di berbagai belahan dunia.
+      <article class="hero" id="hero">
+        <h1 class="h1">CoffeDee</h1>
+        <a href="#why" class="btn">Selengkapnya</a>
+      </article>  
+      <article class="why" id="why">
+        <h1>Kenapa harus CoffeeDee?</h1>
+        <p>Coffee Dee menghadirkan cita rasa kopi robusta asli Indonesia yang kaya akan karakter dan keunikan. Terinspirasi dari tanah nusantara yang subur, setiap biji kopi dipetik dengan teliti dari perkebunan lokal, lalu diproses melalui tahapan tradisional yang menjaga keaslian rasa. Dari secangkir kopi, kami ingin menghadirkan cerita tentang budaya, kerja keras petani, hingga kehangatan yang menyatukan
         </p>
-        <p>
-          Kopi bukan sekadar minuman, melainkan simbol perjalanan hidup. 
-          Dari biji kecil yang keras, ia melewati proses panjang — dipetik, dikeringkan, disangrai, hingga digiling — lalu hadir sebagai cairan hangat yang memberi arti. 
-          Kopi adalah cermin kehidupan: pahit di awal, namun menyisakan kenikmatan bagi mereka yang sabar menikmatinya.
-        </p>
-      </div>  
-      <div class="why" id="why">
-        <h1>Kenapa kopi menjadi minuman favorit?</h1>
-        <p>Banyak orang memilih kopi karena kemampuannya memberikan energi dan fokus berkat kandungan kafeinnya. 
-          Selain itu, aroma dan rasa kopi yang unik menjadikannya minuman favorit di berbagai suasana, baik saat bekerja, belajar, maupun bersantai. 
-          Kopi juga memiliki nilai sosial, karena sering menjadi alasan orang berkumpul, berbincang, atau sekadar menikmati momen bersama.
-        </p>
-        <p>Orang mencari kopi bukan hanya untuk mengusir kantuk, tetapi untuk menemukan ketenangan di tengah hiruk-pikuk dunia. 
-          Kopi menjadi alasan orang berhenti sejenak, merenung, dan merasakan hidup lebih dalam. Di balik rasa pahitnya, 
-          kopi mengajarkan bahwa setiap kepahitan bisa melahirkan energi, kehangatan, bahkan kebersamaan..
-        </p>
+      </article>
+      <article class="product" id="product">
+        <div class="card">
+          <img src="img/arabika.jpg">
+          <div class="katalog-produk">
+            <h3>Arabika</h3>
+            <p>sensasi rasa dabladla</p>
+            <a href="" class="brn">Order Now</a>
+          </div>
         </div>
-      <div class="how" id="how">
-        <h1 class="h1">Bagaimana kopi bisa sampai di gelas kita?</h1>
-        <p>Proses pembuatan kopi dimulai dari pemanenan buah kopi matang, kemudian bijinya dipisahkan, difermentasi, dan dikeringkan. 
-          Setelah itu, biji kopi disangrai untuk menghasilkan aroma dan rasa yang khas, lalu digiling sesuai metode penyeduhan yang diinginkan. 
-          Terakhir, bubuk kopi diseduh dengan air panas atau dingin sehingga tercipta secangkir kopi yang siap dinikmati
-        </p>
-      </div>
+        <div class="card">
+          <img src="img/robusta.jpg">
+          <div class="katalog-produk">
+            <h3>Robusta</h3>
+            <p>sensasi rasa dabladla</p>
+            <a href="" class="brn">Order Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/exelsa.jpg">
+          <div class="katalog-produk">
+            <h3>Exelsa</h3>
+            <p>sensasi rasa dabladla</p>
+            <a href="" class="brn">Order Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/liberika.jpeg">
+          <div class="katalog-produk">
+            <h3>Liberika</h3>
+            <p>sensasi rasa dabladla</p>
+            <a href="" class="brn">Order Now</a>
+          </div>
+        </div>
+      </article>
     </div>
     <!---Konten samping-->
     <aside>
@@ -97,8 +110,7 @@
   </main>
 
   <footer>
-    <div class="contact" id="contact">
-      <h1>Contact</h1>
+    <div class="contact" id="contact"></div>
     <p>&copy;2025 Hasbi Ma'arif, Belajar pemrograman web</p>
     <p><a href="https://unsplash.com/photos/bunch-of-coffee-beans-gzcoF6TNrkg">img copyright : Mark Daynes </a></p>
   </footer>
