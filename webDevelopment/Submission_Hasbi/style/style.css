@@ -121,7 +121,7 @@
 
 /*---------Body-------*/
 body {
-  background-color: #5e6361;
+  background-color: #ffffff;
 }
 
 main {
@@ -240,21 +240,15 @@ main {
   text-align: center;
   display: flex;
   flex-direction: row;
-  background-color: #296d52;
+  background-color: #ffffff;
   flex-wrap: wrap;
-}
-.product::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
 }
 
 .product .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   position: relative;
   color: rgb(241, 222, 222);
   z-index: 1;
@@ -274,6 +268,20 @@ main {
   padding: 16px;
 }
 
+.brn {
+  text-decoration: none;
+  color: white;
+  background-color: green;
+  padding: 2px 5px 5px 5px;
+  border-radius: 20px;
+  font-size 20px;
+  margin-top: 3px;
+}
+
+.brn:hover {
+  background-color: white;
+  color: black ;
+}
 /*Aside*/
 main aside {
   position: fixed;
@@ -358,12 +366,7 @@ footer {
     display: flex;
   }
 
-  aside {
-    display: flex;
-    flex: none;
-    order: 2; /* tampil setelah konten */
-    min-width: 100%; /*biar fleksibel di hp */
-  }
+
 
   .logo-form img {
     max-width: 80%; /* perkecil logo di layar kecil */
