@@ -8,16 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
     navLinks.classList.toggle('open');
   });
 
-  // Dropdown behavior
+  // Tindakan Dropdown
   dropdownToggles.forEach(toggle => {
-    // Hover (desktop)
+    // Hover ketika di desktop
     toggle.addEventListener('mouseenter', () => {
       if (window.innerWidth > 768) {
         toggle.parentElement.classList.add('dropdown-hover');
       }
     });
 
-    // Click (mobile)
+    // Click Ketika di Mobile
     toggle.addEventListener('click', (e) => {
       if (window.innerWidth <= 768) {
         e.preventDefault();
